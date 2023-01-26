@@ -5,7 +5,7 @@ import {createContext, useCallback, useState} from 'react';
 export const ProductCardContext = createContext({} as CardContextProps);
 const { Provider } = ProductCardContext;
 
-interface ProductCardProps {
+export interface ProductCardProps {
     // children:React.ReactElement | React.ReactElement[];
     children:(args:ProductCardHandlers) => JSX.Element;
     initialValues?:InitialValues;

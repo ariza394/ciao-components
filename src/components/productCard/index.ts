@@ -1,4 +1,4 @@
-import { ProductCard as CardHoc } from "./ProductCard";
+import { ProductCard as CardHoc, ProductCardProps } from "./ProductCard";
 import { ProductButtons } from "./ProductButtons";
 import { ProductImg, ImgProps } from './ProductImg';
 import { ProductTitle, TitleProps } from "./ProductTitle";
@@ -15,6 +15,7 @@ export const ProductCard:ProductCardHOCProps = Object.assign(CardHoc, {
 })
 
 interface ProductCardHOCProps{
+    ({ children }: ProductCardProps ):JSX.Element
     Img:( Props: ImgProps ) => JSX.Element,
     Title:( Props: TitleProps ) => JSX.Element,
     Buttons:( Props:any ) => JSX.Element
